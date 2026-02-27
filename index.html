@@ -1,0 +1,626 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Barbearia Roger — Corte e Barba do Jeito Certo</title>
+  <meta name="description" content="Barbearia Roger — Cortes, barba, prótese capilar e muito mais. Agende seu horário agora.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Inter:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/animations.css">
+</head>
+<body>
+  <!-- Noise overlay -->
+  <div class="noise-overlay"></div>
+
+  <!-- Header -->
+  <header class="header" id="header">
+    <div class="container header__inner">
+      <a href="index.html" class="header__logo">
+        <span class="logo-text">BARBEARIA<br><strong>ROGER</strong></span>
+      </a>
+      <nav class="header__nav" id="nav">
+        <ul class="header__menu">
+          <li><a href="#inicio" class="header__link active">Início</a></li>
+          <li><a href="#servicos" class="header__link">Serviços</a></li>
+          <li><a href="#protese" class="header__link">Prótese Capilar</a></li>
+          <li><a href="#galeria" class="header__link">Galeria</a></li>
+          <li><a href="#avaliacoes" class="header__link">Avaliações</a></li>
+          <li><a href="#localizacao" class="header__link">Localização</a></li>
+          <li><a href="#contato" class="header__link">Contato</a></li>
+        </ul>
+      </nav>
+      <a href="https://wa.me/5500000000000" class="btn btn--primary header__cta" target="_blank" rel="noopener">
+        Agendar
+      </a>
+      <button class="header__hamburger" id="hamburger" aria-label="Abrir menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Mobile Nav -->
+  <div class="mobile-nav" id="mobileNav">
+    <ul class="mobile-nav__menu">
+      <li><a href="#inicio" class="mobile-nav__link">Início</a></li>
+      <li><a href="#servicos" class="mobile-nav__link">Serviços</a></li>
+      <li><a href="#protese" class="mobile-nav__link">Prótese Capilar</a></li>
+      <li><a href="#galeria" class="mobile-nav__link">Galeria</a></li>
+      <li><a href="#avaliacoes" class="mobile-nav__link">Avaliações</a></li>
+      <li><a href="#localizacao" class="mobile-nav__link">Localização</a></li>
+      <li><a href="#contato" class="mobile-nav__link">Contato</a></li>
+    </ul>
+    <a href="https://wa.me/5500000000000" class="btn btn--primary mobile-nav__cta" target="_blank" rel="noopener">
+      Agendar agora
+    </a>
+  </div>
+
+  <main>
+    <!-- ==================== HERO ==================== -->
+    <section class="hero" id="inicio">
+      <div class="hero__bg"></div>
+      <div class="container hero__content">
+        <div class="hero__badge">
+          <span class="barber-pole-dot"></span> Barbearia Premium
+        </div>
+        <h1 class="hero__title">CORTE E BARBA<br>DO JEITO <span class="text-accent">CERTO</span></h1>
+        <p class="hero__subtitle">Tradição, estilo e acabamento impecável. Sua experiência começa aqui.</p>
+        <div class="hero__actions">
+          <a href="https://wa.me/5500000000000" class="btn btn--primary btn--lg" target="_blank" rel="noopener">
+            <span class="btn__pole-stripe"></span>
+            Agendar agora
+          </a>
+          <a href="https://wa.me/5500000000000" class="btn btn--secondary btn--lg" target="_blank" rel="noopener">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            Chamar no WhatsApp
+          </a>
+        </div>
+        <div class="hero__stats">
+          <div class="hero__stat">
+            <span class="hero__stat-number">4.9</span>
+            <span class="hero__stat-label">Google</span>
+          </div>
+          <div class="hero__stat-divider"></div>
+          <div class="hero__stat">
+            <span class="hero__stat-number">2000+</span>
+            <span class="hero__stat-label">Clientes</span>
+          </div>
+          <div class="hero__stat-divider"></div>
+          <div class="hero__stat">
+            <span class="hero__stat-number">8+</span>
+            <span class="hero__stat-label">Anos</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== SERVIÇOS ==================== -->
+    <section class="section" id="servicos">
+      <div class="container">
+        <div class="section__header">
+          <span class="section__badge">SERVIÇOS</span>
+          <h2 class="section__title">Nossos <span class="text-accent">Serviços</span></h2>
+          <p class="section__subtitle">Cada serviço é uma experiência completa, com atenção aos detalhes e acabamento impecável.</p>
+        </div>
+        <div class="services-grid">
+          <!-- Service Card 1 -->
+          <div class="card service-card">
+            <div class="service-card__icon">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 3v7a6 6 0 0 0 6 6 6 6 0 0 0 6-6V3"/><line x1="4" y1="21" x2="20" y2="21"/></svg>
+            </div>
+            <h3 class="service-card__title">Corte Masculino</h3>
+            <div class="service-card__meta">
+              <span class="service-card__price">R$ 45</span>
+              <span class="service-card__duration">~ 40 min</span>
+            </div>
+            <ul class="service-card__features">
+              <li>Lavagem</li>
+              <li>Corte na máquina ou tesoura</li>
+              <li>Finalização com produto</li>
+            </ul>
+          </div>
+          <!-- Service Card 2 -->
+          <div class="card service-card">
+            <div class="card__badge">Mais pedido</div>
+            <div class="service-card__icon">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M8 14s1.5 2 4 2 4-2 4-2"/><line x1="9" y1="9" x2="9.01" y2="9"/><line x1="15" y1="9" x2="15.01" y2="9"/></svg>
+            </div>
+            <h3 class="service-card__title">Barba Completa</h3>
+            <div class="service-card__meta">
+              <span class="service-card__price">R$ 35</span>
+              <span class="service-card__duration">~ 30 min</span>
+            </div>
+            <ul class="service-card__features">
+              <li>Toalha quente</li>
+              <li>Navalha</li>
+              <li>Hidratação</li>
+            </ul>
+          </div>
+          <!-- Service Card 3 -->
+          <div class="card service-card">
+            <div class="service-card__icon">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
+            </div>
+            <h3 class="service-card__title">Combo Corte + Barba</h3>
+            <div class="service-card__meta">
+              <span class="service-card__price">R$ 70</span>
+              <span class="service-card__duration">~ 1h 10min</span>
+            </div>
+            <ul class="service-card__features">
+              <li>Corte completo</li>
+              <li>Barba na navalha</li>
+              <li>Finalização premium</li>
+            </ul>
+          </div>
+          <!-- Service Card 4 -->
+          <div class="card service-card">
+            <div class="card__badge badge--new">Novo</div>
+            <div class="service-card__icon">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+            </div>
+            <h3 class="service-card__title">Corte Infantil</h3>
+            <div class="service-card__meta">
+              <span class="service-card__price">R$ 35</span>
+              <span class="service-card__duration">~ 30 min</span>
+            </div>
+            <ul class="service-card__features">
+              <li>Ambiente descontraído</li>
+              <li>Paciência e cuidado</li>
+              <li>Finalização caprichada</li>
+            </ul>
+          </div>
+          <!-- Service Card 5 -->
+          <div class="card service-card">
+            <div class="service-card__icon">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            </div>
+            <h3 class="service-card__title">Pigmentação</h3>
+            <div class="service-card__meta">
+              <span class="service-card__price">R$ 25</span>
+              <span class="service-card__duration">~ 20 min</span>
+            </div>
+            <ul class="service-card__features">
+              <li>Disfarce de falhas</li>
+              <li>Aspecto natural</li>
+              <li>Longa duração</li>
+            </ul>
+          </div>
+          <!-- Service Card 6 -->
+          <div class="card service-card">
+            <div class="service-card__icon">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 9V5a3 3 0 0 0-3-3l-4 9v11h11.28a2 2 0 0 0 2-1.7l1.38-9a2 2 0 0 0-2-2.3zM7 22H4a2 2 0 0 1-2-2v-7a2 2 0 0 1 2-2h3"/></svg>
+            </div>
+            <h3 class="service-card__title">Sobrancelha</h3>
+            <div class="service-card__meta">
+              <span class="service-card__price">R$ 15</span>
+              <span class="service-card__duration">~ 10 min</span>
+            </div>
+            <ul class="service-card__features">
+              <li>Design masculino</li>
+              <li>Navalha</li>
+              <li>Acabamento limpo</li>
+            </ul>
+          </div>
+        </div>
+        <div class="section__cta">
+          <a href="servicos.html" class="btn btn--secondary">Ver todos os serviços</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== PRÓTESE CAPILAR ==================== -->
+    <section class="section section--alt" id="protese">
+      <div class="container">
+        <div class="protese-grid">
+          <div class="protese__content">
+            <span class="section__badge">PRÓTESE CAPILAR</span>
+            <h2 class="section__title">Prótese com <em class="text-accent-italic">acabamento natural</em></h2>
+            <p class="protese__text">
+              Solução moderna e discreta para quem busca recuperar a autoestima com resultado imperceptível. Trabalhamos com as melhores bases e fios do mercado.
+            </p>
+            <div class="protese__steps">
+              <div class="protese__step">
+                <span class="protese__step-num">01</span>
+                <div>
+                  <h4>Consulta</h4>
+                  <p>Avaliação completa e personalizada</p>
+                </div>
+              </div>
+              <div class="protese__step">
+                <span class="protese__step-num">02</span>
+                <div>
+                  <h4>Medição</h4>
+                  <p>Molde exato da área</p>
+                </div>
+              </div>
+              <div class="protese__step">
+                <span class="protese__step-num">03</span>
+                <div>
+                  <h4>Aplicação</h4>
+                  <p>Fixação profissional e segura</p>
+                </div>
+              </div>
+              <div class="protese__step">
+                <span class="protese__step-num">04</span>
+                <div>
+                  <h4>Corte e finalização</h4>
+                  <p>Acabamento perfeito e natural</p>
+                </div>
+              </div>
+              <div class="protese__step">
+                <span class="protese__step-num">05</span>
+                <div>
+                  <h4>Manutenção</h4>
+                  <p>Acompanhamento periódico</p>
+                </div>
+              </div>
+            </div>
+            <a href="https://wa.me/5500000000000?text=Olá! Gostaria de saber mais sobre prótese capilar." class="btn btn--primary" target="_blank" rel="noopener">
+              <span class="btn__pole-stripe"></span>
+              Agendar avaliação
+            </a>
+          </div>
+          <div class="protese__image">
+            <div class="protese__image-frame">
+              <img src="https://images.unsplash.com/photo-1621605815971-fbc98d665033?w=600&h=800&fit=crop&crop=top" alt="Prótese capilar — resultado natural" loading="lazy">
+              <div class="protese__image-badge">
+                <span>Resultado</span>
+                <strong>Natural</strong>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== ANTES E DEPOIS ==================== -->
+    <section class="section" id="galeria">
+      <div class="container">
+        <div class="section__header">
+          <span class="section__badge">GALERIA</span>
+          <h2 class="section__title">Antes e <span class="text-accent">Depois</span></h2>
+          <p class="section__subtitle">Resultados reais dos nossos clientes. Cada transformação conta uma história.</p>
+        </div>
+        <div class="gallery-grid">
+          <!-- Card 1 -->
+          <div class="tilt-card" data-tilt>
+            <div class="ba-card">
+              <div class="ba-card__images">
+                <div class="ba-card__image ba-card__image--before">
+                  <img src="https://images.unsplash.com/photo-1503951914875-452162b0f3f1?w=400&h=500&fit=crop" alt="Antes" loading="lazy">
+                  <span class="ba-card__label">Antes</span>
+                </div>
+                <div class="ba-card__image ba-card__image--after">
+                  <img src="https://images.unsplash.com/photo-1605497788044-5a32c7078486?w=400&h=500&fit=crop" alt="Depois" loading="lazy">
+                  <span class="ba-card__label ba-card__label--after">Depois</span>
+                </div>
+              </div>
+              <div class="ba-card__info">
+                <h4>Corte Degradê</h4>
+                <p>Transformação completa com degradê e alinhamento.</p>
+              </div>
+              <div class="ba-card__shine"></div>
+            </div>
+          </div>
+          <!-- Card 2 -->
+          <div class="tilt-card" data-tilt>
+            <div class="ba-card">
+              <div class="ba-card__images">
+                <div class="ba-card__image ba-card__image--before">
+                  <img src="https://images.unsplash.com/photo-1621605815971-fbc98d665033?w=400&h=500&fit=crop" alt="Antes" loading="lazy">
+                  <span class="ba-card__label">Antes</span>
+                </div>
+                <div class="ba-card__image ba-card__image--after">
+                  <img src="https://images.unsplash.com/photo-1622286342621-4bd786c2447c?w=400&h=500&fit=crop" alt="Depois" loading="lazy">
+                  <span class="ba-card__label ba-card__label--after">Depois</span>
+                </div>
+              </div>
+              <div class="ba-card__info">
+                <h4>Prótese Capilar</h4>
+                <p>Resultado imperceptível e natural.</p>
+              </div>
+              <div class="ba-card__shine"></div>
+            </div>
+          </div>
+          <!-- Card 3 -->
+          <div class="tilt-card" data-tilt>
+            <div class="ba-card">
+              <div class="ba-card__images">
+                <div class="ba-card__image ba-card__image--before">
+                  <img src="https://images.unsplash.com/photo-1599351431202-1e0f0137899a?w=400&h=500&fit=crop" alt="Antes" loading="lazy">
+                  <span class="ba-card__label">Antes</span>
+                </div>
+                <div class="ba-card__image ba-card__image--after">
+                  <img src="https://images.unsplash.com/photo-1621605815971-fbc98d665033?w=400&h=500&fit=crop" alt="Depois" loading="lazy">
+                  <span class="ba-card__label ba-card__label--after">Depois</span>
+                </div>
+              </div>
+              <div class="ba-card__info">
+                <h4>Barba Completa</h4>
+                <p>Barba alinhada com navalha e toalha quente.</p>
+              </div>
+              <div class="ba-card__shine"></div>
+            </div>
+          </div>
+          <!-- Card 4 -->
+          <div class="tilt-card" data-tilt>
+            <div class="ba-card">
+              <div class="ba-card__images">
+                <div class="ba-card__image ba-card__image--before">
+                  <img src="https://images.unsplash.com/photo-1596728325488-58c87691e9af?w=400&h=500&fit=crop" alt="Antes" loading="lazy">
+                  <span class="ba-card__label">Antes</span>
+                </div>
+                <div class="ba-card__image ba-card__image--after">
+                  <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=500&fit=crop" alt="Depois" loading="lazy">
+                  <span class="ba-card__label ba-card__label--after">Depois</span>
+                </div>
+              </div>
+              <div class="ba-card__info">
+                <h4>Social Completo</h4>
+                <p>Corte social refinado com acabamento impecável.</p>
+              </div>
+              <div class="ba-card__shine"></div>
+            </div>
+          </div>
+          <!-- Card 5 -->
+          <div class="tilt-card" data-tilt>
+            <div class="ba-card">
+              <div class="ba-card__images">
+                <div class="ba-card__image ba-card__image--before">
+                  <img src="https://images.unsplash.com/photo-1580518337843-f959e992563b?w=400&h=500&fit=crop" alt="Antes" loading="lazy">
+                  <span class="ba-card__label">Antes</span>
+                </div>
+                <div class="ba-card__image ba-card__image--after">
+                  <img src="https://images.unsplash.com/photo-1620122303020-87ec826cf70d?w=400&h=500&fit=crop" alt="Depois" loading="lazy">
+                  <span class="ba-card__label ba-card__label--after">Depois</span>
+                </div>
+              </div>
+              <div class="ba-card__info">
+                <h4>Pigmentação</h4>
+                <p>Disfarce de falhas com resultado natural.</p>
+              </div>
+              <div class="ba-card__shine"></div>
+            </div>
+          </div>
+          <!-- Card 6 -->
+          <div class="tilt-card" data-tilt>
+            <div class="ba-card">
+              <div class="ba-card__images">
+                <div class="ba-card__image ba-card__image--before">
+                  <img src="https://images.unsplash.com/photo-1521119989659-a83eee488004?w=400&h=500&fit=crop" alt="Antes" loading="lazy">
+                  <span class="ba-card__label">Antes</span>
+                </div>
+                <div class="ba-card__image ba-card__image--after">
+                  <img src="https://images.unsplash.com/photo-1534030347209-467a5b0ad3e6?w=400&h=500&fit=crop" alt="Depois" loading="lazy">
+                  <span class="ba-card__label ba-card__label--after">Depois</span>
+                </div>
+              </div>
+              <div class="ba-card__info">
+                <h4>Corte + Barba</h4>
+                <p>Combo completo com visual renovado.</p>
+              </div>
+              <div class="ba-card__shine"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== AVALIAÇÕES ==================== -->
+    <section class="section section--alt" id="avaliacoes">
+      <div class="container">
+        <div class="section__header">
+          <span class="section__badge">AVALIAÇÕES</span>
+          <h2 class="section__title">O que nossos clientes <span class="text-accent">dizem</span></h2>
+        </div>
+        <div class="reviews-hero">
+          <div class="reviews-score">
+            <span class="reviews-score__number">4.9</span>
+            <div class="reviews-score__stars">★★★★★</div>
+            <span class="reviews-score__label">Google Reviews</span>
+          </div>
+        </div>
+        <div class="reviews-grid">
+          <!-- Review 1 -->
+          <div class="card review-card">
+            <div class="review-card__header">
+              <div class="review-card__avatar">M</div>
+              <div>
+                <h4 class="review-card__name">Marcos Silva</h4>
+                <div class="review-card__stars">★★★★★</div>
+              </div>
+            </div>
+            <p class="review-card__text">"Melhor barbearia da região. Atendimento excelente e corte sempre no ponto. Recomendo demais!"</p>
+            <span class="review-card__source">Google</span>
+          </div>
+          <!-- Review 2 -->
+          <div class="card review-card">
+            <div class="review-card__header">
+              <div class="review-card__avatar">R</div>
+              <div>
+                <h4 class="review-card__name">Rafael Costa</h4>
+                <div class="review-card__stars">★★★★★</div>
+              </div>
+            </div>
+            <p class="review-card__text">"Fiz a prótese capilar e mudou minha vida. Resultado super natural, ninguém percebe. Profissional top!"</p>
+            <span class="review-card__source">Google</span>
+          </div>
+          <!-- Review 3 -->
+          <div class="card review-card">
+            <div class="review-card__header">
+              <div class="review-card__avatar">L</div>
+              <div>
+                <h4 class="review-card__name">Lucas Oliveira</h4>
+                <div class="review-card__stars">★★★★★</div>
+              </div>
+            </div>
+            <p class="review-card__text">"Ambiente top, cerveja gelada e corte de qualidade. Saio de lá me sentindo outro. Nota 10!"</p>
+            <span class="review-card__source">Instagram</span>
+          </div>
+          <!-- Review 4 -->
+          <div class="card review-card">
+            <div class="review-card__header">
+              <div class="review-card__avatar">P</div>
+              <div>
+                <h4 class="review-card__name">Pedro Santos</h4>
+                <div class="review-card__stars">★★★★★</div>
+              </div>
+            </div>
+            <p class="review-card__text">"Levo meu filho lá e ele adora. Atendimento com paciência e o corte fica perfeito. Virei cliente fixo."</p>
+            <span class="review-card__source">Google</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== LOCALIZAÇÃO ==================== -->
+    <section class="section" id="localizacao">
+      <div class="container">
+        <div class="section__header">
+          <span class="section__badge">LOCALIZAÇÃO</span>
+          <h2 class="section__title">Como <span class="text-accent">chegar</span></h2>
+        </div>
+        <div class="location-grid">
+          <div class="location__info">
+            <div class="location__item">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              <div>
+                <h4>Endereço</h4>
+                <p>Rua Exemplo, 123 — Centro<br>São Paulo, SP</p>
+              </div>
+            </div>
+            <div class="location__item">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+              <div>
+                <h4>Horários</h4>
+                <p>Seg — Sex: 9h às 20h<br>Sáb: 8h às 18h<br>Dom: Fechado</p>
+              </div>
+            </div>
+            <div class="location__item">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="3" width="15" height="13"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>
+              <div>
+                <h4>Estacionamento</h4>
+                <p>Estacionamento gratuito na porta</p>
+              </div>
+            </div>
+          </div>
+          <div class="location__map">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3657.1975576255!2d-46.65529068502168!3d-23.56507178468092!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce59c8da0aa315%3A0xd59f9431f2c9776a!2sAv.%20Paulista%2C%20S%C3%A3o%20Paulo%20-%20SP!5e0!3m2!1spt-BR!2sbr!4v1" width="100%" height="400" style="border:0; border-radius: 12px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== CONTATO ==================== -->
+    <section class="section section--alt" id="contato">
+      <div class="container">
+        <div class="section__header">
+          <span class="section__badge">CONTATO</span>
+          <h2 class="section__title">Fale <span class="text-accent">conosco</span></h2>
+          <p class="section__subtitle">Dúvidas, agendamentos ou parcerias. Estamos aqui.</p>
+        </div>
+        <div class="contact-grid">
+          <div class="contact__buttons">
+            <a href="https://wa.me/5500000000000" class="contact-btn contact-btn--whatsapp" target="_blank" rel="noopener">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+              <div>
+                <strong>WhatsApp</strong>
+                <span>Resposta rápida</span>
+              </div>
+            </a>
+            <a href="https://instagram.com/" class="contact-btn contact-btn--instagram" target="_blank" rel="noopener">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+              <div>
+                <strong>Instagram</strong>
+                <span>@barbeariarodger</span>
+              </div>
+            </a>
+            <a href="tel:+5500000000000" class="contact-btn contact-btn--phone">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+              <div>
+                <strong>Ligar</strong>
+                <span>(00) 0000-0000</span>
+              </div>
+            </a>
+          </div>
+          <form class="contact-form" id="contactForm">
+            <div class="form-group">
+              <input type="text" class="form-input" placeholder="Seu nome" required>
+            </div>
+            <div class="form-group">
+              <input type="tel" class="form-input" placeholder="Seu telefone" required>
+            </div>
+            <div class="form-group">
+              <select class="form-input" required>
+                <option value="" disabled selected>Assunto</option>
+                <option>Agendamento</option>
+                <option>Prótese Capilar</option>
+                <option>Dúvida</option>
+                <option>Parceria</option>
+                <option>Outro</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <textarea class="form-input" rows="4" placeholder="Sua mensagem" required></textarea>
+            </div>
+            <button type="submit" class="btn btn--primary btn--full">
+              <span class="btn__pole-stripe"></span>
+              Enviar mensagem
+            </button>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ==================== FOOTER ==================== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__brand">
+          <span class="logo-text logo-text--sm">BARBEARIA<br><strong>ROGER</strong></span>
+          <p class="footer__tagline">Corte e barba do jeito certo.</p>
+        </div>
+        <div class="footer__col">
+          <h4 class="footer__heading">NAVEGAÇÃO</h4>
+          <ul class="footer__links">
+            <li><a href="#inicio">Início</a></li>
+            <li><a href="#servicos">Serviços</a></li>
+            <li><a href="#protese">Prótese Capilar</a></li>
+            <li><a href="#galeria">Galeria</a></li>
+          </ul>
+        </div>
+        <div class="footer__col">
+          <h4 class="footer__heading">CONTATO</h4>
+          <ul class="footer__links">
+            <li><a href="https://wa.me/5500000000000" target="_blank" rel="noopener">WhatsApp</a></li>
+            <li><a href="https://instagram.com/" target="_blank" rel="noopener">Instagram</a></li>
+            <li><a href="tel:+5500000000000">(00) 0000-0000</a></li>
+          </ul>
+        </div>
+        <div class="footer__col">
+          <h4 class="footer__heading">HORÁRIOS</h4>
+          <ul class="footer__links footer__links--info">
+            <li>Seg — Sex: 9h às 20h</li>
+            <li>Sáb: 8h às 18h</li>
+            <li>Dom: Fechado</li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer__barber-stripe"></div>
+      <div class="footer__bottom">
+        <p>&copy; 2026 Barbearia Roger. Todos os direitos reservados.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- WhatsApp float -->
+  <a href="https://wa.me/5500000000000" class="whatsapp-float" target="_blank" rel="noopener" aria-label="WhatsApp">
+    <svg width="28" height="28" viewBox="0 0 24 24" fill="#fff"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+  </a>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
