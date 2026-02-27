@@ -185,7 +185,7 @@
         `Olá! Me chamo ${name}.\nTelefone: ${phone}\nAssunto: ${subject}\nMensagem: ${message}`
       );
 
-      window.open(`https://wa.me/5500000000000?text=${whatsappMsg}`, '_blank');
+      window.open(`https://wa.me/5515992014976?text=${whatsappMsg}`, '_blank');
     });
   }
 
