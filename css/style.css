@@ -1180,12 +1180,28 @@ textarea.form-input {
 }
 
 .footer__bottom {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
   text-align: center;
 }
 
 .footer__bottom p {
   font-size: 13px;
   color: var(--gray-steel);
+}
+
+.footer__credit {
+  text-align: right;
+}
+
+@media (min-width: 640px) {
+  .footer__bottom {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    text-align: left;
+  }
 }
 
 /* ==============================
