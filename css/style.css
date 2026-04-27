@@ -1184,10 +1184,11 @@ textarea.form-input {
 
 .footer__bottom p {
   font-size: 13px;
-  color: var(--gray-steel);
+  color: var(--white-ice);
 }
 
 .footer__credit {
+  font-weight: 600;
   text-align: right;
 }
 
