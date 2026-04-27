@@ -49,28 +49,32 @@
   // ===============================
   // 3. Active nav link on scroll
   // ===============================
-  const sections = document.querySelectorAll('section[id]');
-  const navLinks = document.querySelectorAll('.header__link');
+  const sections = Array.from(document.querySelectorAll('section[id]'));
+  const navLinks = document.querySelectorAll('.header__link, .mobile-nav__link');
 
   function updateActiveNav() {
-    const scrollPos = window.scrollY + 100;
-    sections.forEach(section => {
-      const top = section.offsetTop;
-      const height = section.offsetHeight;
-      const id = section.getAttribute('id');
+    if (!sections.length || !navLinks.length) return;
 
-      if (scrollPos >= top && scrollPos < top + height) {
-        navLinks.forEach(link => {
-          link.classList.remove('active');
-          if (link.getAttribute('href') === '#' + id) {
-            link.classList.add('active');
-          }
-        });
+    const headerOffset = header ? header.offsetHeight : 0;
+    const activationLine = headerOffset + window.innerHeight * 0.32;
+    let activeId = sections[0].id;
+
+    sections.forEach(section => {
+      const rect = section.getBoundingClientRect();
+      if (rect.top <= activationLine && rect.bottom > headerOffset) {
+        activeId = section.id;
       }
+    });
+
+    navLinks.forEach(link => {
+      const isActive = link.getAttribute('href') === '#' + activeId;
+      link.classList.toggle('active', isActive);
     });
   }
 
   window.addEventListener('scroll', updateActiveNav, { passive: true });
+  window.addEventListener('resize', updateActiveNav);
+  updateActiveNav();
 
   // ===============================
   // 4. Scroll reveal (Intersection Observer)

@@ -325,11 +325,6 @@ h1, h2, h3, h4, h5, h6 {
   margin: 0 auto;
 }
 
-.section__cta {
-  text-align: center;
-  margin-top: var(--space-7);
-}
-
 /* ==============================
    HEADER
    ============================== */
@@ -486,7 +481,8 @@ h1, h2, h3, h4, h5, h6 {
   transition: color var(--transition-fast);
 }
 
-.mobile-nav__link:hover {
+.mobile-nav__link:hover,
+.mobile-nav__link.active {
   color: var(--white-ice);
 }
 
