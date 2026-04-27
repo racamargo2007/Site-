@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Barbearia Roger — Corte e Barba do Jeito Certo</title>
-  <meta name="description" content="Barbearia Roger — Cortes, barba, prótese capilar e muito mais. Agende seu horário agora.">
+  <meta name="description" content="Barbearia Roger — Corte de cabelo, barba, sobrancelha, pezinho e risquinho. Agende seu horário agora.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Inter:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
@@ -25,7 +25,6 @@
         <ul class="header__menu">
           <li><a href="#inicio" class="header__link active">Início</a></li>
           <li><a href="#servicos" class="header__link">Serviços</a></li>
-          <li><a href="#protese" class="header__link">Prótese Capilar</a></li>
           <li><a href="#galeria" class="header__link">Galeria</a></li>
           <li><a href="#avaliacoes" class="header__link">Avaliações</a></li>
           <li><a href="#localizacao" class="header__link">Localização</a></li>
@@ -46,7 +45,6 @@
     <ul class="mobile-nav__menu">
       <li><a href="#inicio" class="mobile-nav__link">Início</a></li>
       <li><a href="#servicos" class="mobile-nav__link">Serviços</a></li>
-      <li><a href="#protese" class="mobile-nav__link">Prótese Capilar</a></li>
       <li><a href="#galeria" class="mobile-nav__link">Galeria</a></li>
       <li><a href="#avaliacoes" class="mobile-nav__link">Avaliações</a></li>
       <li><a href="#localizacao" class="mobile-nav__link">Localização</a></li>
@@ -105,96 +103,44 @@
           <p class="section__subtitle">Cada serviço é uma experiência completa, com atenção aos detalhes e acabamento impecável.</p>
         </div>
         <div class="services-grid">
-          <!-- Service Card 1 -->
           <div class="card service-card">
             <div class="service-card__icon">
               <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 3v7a6 6 0 0 0 6 6 6 6 0 0 0 6-6V3"/><line x1="4" y1="21" x2="20" y2="21"/></svg>
             </div>
-            <h3 class="service-card__title">Corte Masculino</h3>
+            <h3 class="service-card__title">Corte de Cabelo</h3>
             <div class="service-card__meta">
-              <span class="service-card__price">R$ 45</span>
+              <span class="service-card__price">R$ 50</span>
               <span class="service-card__duration">~ 40 min</span>
             </div>
             <ul class="service-card__features">
-              <li>Lavagem</li>
               <li>Corte na máquina ou tesoura</li>
-              <li>Finalização com produto</li>
+              <li>Acabamento limpo</li>
+              <li>Finalização</li>
             </ul>
           </div>
-          <!-- Service Card 2 -->
           <div class="card service-card">
             <div class="card__badge">Mais pedido</div>
             <div class="service-card__icon">
               <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M8 14s1.5 2 4 2 4-2 4-2"/><line x1="9" y1="9" x2="9.01" y2="9"/><line x1="15" y1="9" x2="15.01" y2="9"/></svg>
             </div>
-            <h3 class="service-card__title">Barba Completa</h3>
+            <h3 class="service-card__title">Barba</h3>
             <div class="service-card__meta">
-              <span class="service-card__price">R$ 35</span>
+              <span class="service-card__price">R$ 50</span>
               <span class="service-card__duration">~ 30 min</span>
             </div>
             <ul class="service-card__features">
-              <li>Toalha quente</li>
-              <li>Navalha</li>
-              <li>Hidratação</li>
+              <li>Alinhamento</li>
+              <li>Contorno</li>
+              <li>Acabamento na navalha</li>
             </ul>
           </div>
-          <!-- Service Card 3 -->
-          <div class="card service-card">
-            <div class="service-card__icon">
-              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
-            </div>
-            <h3 class="service-card__title">Combo Corte + Barba</h3>
-            <div class="service-card__meta">
-              <span class="service-card__price">R$ 70</span>
-              <span class="service-card__duration">~ 1h 10min</span>
-            </div>
-            <ul class="service-card__features">
-              <li>Corte completo</li>
-              <li>Barba na navalha</li>
-              <li>Finalização premium</li>
-            </ul>
-          </div>
-          <!-- Service Card 4 -->
-          <div class="card service-card">
-            <div class="card__badge badge--new">Novo</div>
-            <div class="service-card__icon">
-              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
-            </div>
-            <h3 class="service-card__title">Corte Infantil</h3>
-            <div class="service-card__meta">
-              <span class="service-card__price">R$ 35</span>
-              <span class="service-card__duration">~ 30 min</span>
-            </div>
-            <ul class="service-card__features">
-              <li>Ambiente descontraído</li>
-              <li>Paciência e cuidado</li>
-              <li>Finalização caprichada</li>
-            </ul>
-          </div>
-          <!-- Service Card 5 -->
-          <div class="card service-card">
-            <div class="service-card__icon">
-              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-            </div>
-            <h3 class="service-card__title">Pigmentação</h3>
-            <div class="service-card__meta">
-              <span class="service-card__price">R$ 25</span>
-              <span class="service-card__duration">~ 20 min</span>
-            </div>
-            <ul class="service-card__features">
-              <li>Disfarce de falhas</li>
-              <li>Aspecto natural</li>
-              <li>Longa duração</li>
-            </ul>
-          </div>
-          <!-- Service Card 6 -->
           <div class="card service-card">
             <div class="service-card__icon">
               <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 9V5a3 3 0 0 0-3-3l-4 9v11h11.28a2 2 0 0 0 2-1.7l1.38-9a2 2 0 0 0-2-2.3zM7 22H4a2 2 0 0 1-2-2v-7a2 2 0 0 1 2-2h3"/></svg>
             </div>
             <h3 class="service-card__title">Sobrancelha</h3>
             <div class="service-card__meta">
-              <span class="service-card__price">R$ 15</span>
+              <span class="service-card__price">R$ 10</span>
               <span class="service-card__duration">~ 10 min</span>
             </div>
             <ul class="service-card__features">
@@ -203,74 +149,39 @@
               <li>Acabamento limpo</li>
             </ul>
           </div>
+          <div class="card service-card">
+            <div class="service-card__icon">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 3v7a6 6 0 0 0 6 6 6 6 0 0 0 6-6V3"/><line x1="4" y1="21" x2="20" y2="21"/></svg>
+            </div>
+            <h3 class="service-card__title">Pezinho</h3>
+            <div class="service-card__meta">
+              <span class="service-card__price">R$ 15</span>
+              <span class="service-card__duration">~ 10 min</span>
+            </div>
+            <ul class="service-card__features">
+              <li>Acabamento da nuca</li>
+              <li>Contorno limpo</li>
+              <li>Finalização rápida</li>
+            </ul>
+          </div>
+          <div class="card service-card">
+            <div class="service-card__icon">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            </div>
+            <h3 class="service-card__title">Risquinho</h3>
+            <div class="service-card__meta">
+              <span class="service-card__price">R$ 10</span>
+              <span class="service-card__duration">~ 5 min</span>
+            </div>
+            <ul class="service-card__features">
+              <li>Detalhe na navalha</li>
+              <li>Desenho simples</li>
+              <li>Acabamento preciso</li>
+            </ul>
+          </div>
         </div>
         <div class="section__cta">
           <a href="servicos.html" class="btn btn--secondary">Ver todos os serviços</a>
-        </div>
-      </div>
-    </section>
-
-    <!-- ==================== PRÓTESE CAPILAR ==================== -->
-    <section class="section section--alt" id="protese">
-      <div class="container">
-        <div class="protese-grid">
-          <div class="protese__content">
-            <span class="section__badge">PRÓTESE CAPILAR</span>
-            <h2 class="section__title">Prótese com <em class="text-accent-italic">acabamento natural</em></h2>
-            <p class="protese__text">
-              Solução moderna e discreta para quem busca recuperar a autoestima com resultado imperceptível. Trabalhamos com as melhores bases e fios do mercado.
-            </p>
-            <div class="protese__steps">
-              <div class="protese__step">
-                <span class="protese__step-num">01</span>
-                <div>
-                  <h4>Consulta</h4>
-                  <p>Avaliação completa e personalizada</p>
-                </div>
-              </div>
-              <div class="protese__step">
-                <span class="protese__step-num">02</span>
-                <div>
-                  <h4>Medição</h4>
-                  <p>Molde exato da área</p>
-                </div>
-              </div>
-              <div class="protese__step">
-                <span class="protese__step-num">03</span>
-                <div>
-                  <h4>Aplicação</h4>
-                  <p>Fixação profissional e segura</p>
-                </div>
-              </div>
-              <div class="protese__step">
-                <span class="protese__step-num">04</span>
-                <div>
-                  <h4>Corte e finalização</h4>
-                  <p>Acabamento perfeito e natural</p>
-                </div>
-              </div>
-              <div class="protese__step">
-                <span class="protese__step-num">05</span>
-                <div>
-                  <h4>Manutenção</h4>
-                  <p>Acompanhamento periódico</p>
-                </div>
-              </div>
-            </div>
-            <a href="https://wa.me/5515992014976?text=Olá! Gostaria de saber mais sobre prótese capilar." class="btn btn--primary" target="_blank" rel="noopener">
-              <span class="btn__pole-stripe"></span>
-              Agendar avaliação
-            </a>
-          </div>
-          <div class="protese__image">
-            <div class="protese__image-frame">
-              <img src="https://images.unsplash.com/photo-1621605815971-fbc98d665033?w=600&h=800&fit=crop&crop=top" alt="Prótese capilar — resultado natural" loading="lazy">
-              <div class="protese__image-badge">
-                <span>Resultado</span>
-                <strong>Natural</strong>
-              </div>
-            </div>
-          </div>
         </div>
       </div>
     </section>
@@ -298,8 +209,8 @@
                 </div>
               </div>
               <div class="ba-card__info">
-                <h4>Corte Degradê</h4>
-                <p>Transformação completa com degradê e alinhamento.</p>
+                <h4>Corte de Cabelo</h4>
+                <p>Transformação com corte alinhado e acabamento limpo.</p>
               </div>
               <div class="ba-card__shine"></div>
             </div>
@@ -318,8 +229,8 @@
                 </div>
               </div>
               <div class="ba-card__info">
-                <h4>Prótese Capilar</h4>
-                <p>Resultado imperceptível e natural.</p>
+                <h4>Barba</h4>
+                <p>Barba alinhada com contorno preciso.</p>
               </div>
               <div class="ba-card__shine"></div>
             </div>
@@ -338,8 +249,8 @@
                 </div>
               </div>
               <div class="ba-card__info">
-                <h4>Barba Completa</h4>
-                <p>Barba alinhada com navalha e toalha quente.</p>
+                <h4>Sobrancelha</h4>
+                <p>Design masculino com acabamento limpo.</p>
               </div>
               <div class="ba-card__shine"></div>
             </div>
@@ -358,8 +269,8 @@
                 </div>
               </div>
               <div class="ba-card__info">
-                <h4>Social Completo</h4>
-                <p>Corte social refinado com acabamento impecável.</p>
+                <h4>Pezinho</h4>
+                <p>Contorno da nuca com finalização rápida.</p>
               </div>
               <div class="ba-card__shine"></div>
             </div>
@@ -378,8 +289,8 @@
                 </div>
               </div>
               <div class="ba-card__info">
-                <h4>Pigmentação</h4>
-                <p>Disfarce de falhas com resultado natural.</p>
+                <h4>Risquinho</h4>
+                <p>Detalhe simples com acabamento preciso.</p>
               </div>
               <div class="ba-card__shine"></div>
             </div>
@@ -398,8 +309,8 @@
                 </div>
               </div>
               <div class="ba-card__info">
-                <h4>Corte + Barba</h4>
-                <p>Combo completo com visual renovado.</p>
+                <h4>Corte de Cabelo</h4>
+                <p>Corte na máquina ou tesoura com finalização.</p>
               </div>
               <div class="ba-card__shine"></div>
             </div>
@@ -553,7 +464,6 @@
               <select class="form-input" required>
                 <option value="" disabled selected>Assunto</option>
                 <option>Agendamento</option>
-                <option>Prótese Capilar</option>
                 <option>Dúvida</option>
                 <option>Parceria</option>
                 <option>Outro</option>
@@ -585,7 +495,6 @@
           <ul class="footer__links">
             <li><a href="#inicio">Início</a></li>
             <li><a href="#servicos">Serviços</a></li>
-            <li><a href="#protese">Prótese Capilar</a></li>
             <li><a href="#galeria">Galeria</a></li>
           </ul>
         </div>

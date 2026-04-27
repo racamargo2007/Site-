@@ -80,8 +80,6 @@
     '.services-grid .card, ' +
     '.gallery-grid .tilt-card, ' +
     '.reviews-grid .card, ' +
-    '.protese__content, ' +
-    '.protese__image, ' +
     '.reviews-hero, ' +
     '.location__info, ' +
     '.location__map, ' +

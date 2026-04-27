@@ -138,25 +138,6 @@
   animation: fadeInUp 0.6s ease forwards;
 }
 
-/* ---- Protese section ---- */
-.protese__content {
-  opacity: 0;
-  transform: translateX(-30px);
-}
-
-.protese__content.visible {
-  animation: fadeInLeft 0.6s ease forwards;
-}
-
-.protese__image {
-  opacity: 0;
-  transform: translateX(30px);
-}
-
-.protese__image.visible {
-  animation: fadeInRight 0.6s ease 0.2s forwards;
-}
-
 /* ---- Location & Contact ---- */
 .location__info,
 .contact__buttons {
