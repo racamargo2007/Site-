@@ -1125,8 +1125,12 @@ textarea.form-input {
 
 .footer__tagline {
   font-size: 14px;
-  color: var(--gray-smoke);
+  color: var(--white-ice);
   margin-top: var(--space-3);
+}
+
+.footer .logo-text {
+  color: var(--white-ice);
 }
 
 .footer__heading {
@@ -1134,7 +1138,7 @@ textarea.form-input {
   font-size: 13px;
   font-weight: 600;
   letter-spacing: 0.1em;
-  color: var(--gray-smoke);
+  color: var(--white-ice);
   margin-bottom: var(--space-4);
 }
 
@@ -1146,7 +1150,7 @@ textarea.form-input {
 
 .footer__links a {
   font-size: 14px;
-  color: var(--gray-smoke);
+  color: var(--white-ice);
   transition: color var(--transition-fast);
 }
 
@@ -1156,7 +1160,7 @@ textarea.form-input {
 
 .footer__links--info li {
   font-size: 14px;
-  color: var(--gray-smoke);
+  color: var(--white-ice);
 }
 
 .footer__barber-stripe {
