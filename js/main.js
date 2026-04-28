@@ -128,10 +128,53 @@
   // 3. Active nav link on scroll
   // ===============================
   const sections = Array.from(document.querySelectorAll('section[id]'));
+  const headerMenu = document.querySelector('.header__menu');
   const navLinks = document.querySelectorAll('.header__link, .mobile-nav__link');
+  let activeIndicator = null;
+  let activeIndicatorFrame = null;
+  let lastIndicatorX = 0;
+
+  if (headerMenu) {
+    activeIndicator = document.createElement('span');
+    activeIndicator.className = 'header__active-indicator';
+    activeIndicator.setAttribute('aria-hidden', 'true');
+    headerMenu.appendChild(activeIndicator);
+    window.requestAnimationFrame(() => {
+      moveActiveIndicator(document.querySelector('.header__link.active'));
+    });
+  }
+
+  function moveActiveIndicator(activeLink) {
+    if (!headerMenu || !activeIndicator || !activeLink) return;
+
+    const menuRect = headerMenu.getBoundingClientRect();
+    const linkRect = activeLink.getBoundingClientRect();
+    const nextX = linkRect.left - menuRect.left;
+    const distance = Math.abs(nextX - lastIndicatorX);
+    const stretch = Math.min(1.45, 1 + distance / 360);
+
+    activeIndicator.style.setProperty('--indicator-x', nextX + 'px');
+    activeIndicator.style.setProperty('--indicator-width', linkRect.width + 'px');
+    activeIndicator.style.setProperty('--indicator-scale', stretch);
+    lastIndicatorX = nextX;
+
+    if (activeIndicatorFrame) {
+      window.cancelAnimationFrame(activeIndicatorFrame);
+    }
+
+    activeIndicatorFrame = window.requestAnimationFrame(() => {
+      window.setTimeout(() => {
+        activeIndicator.style.setProperty('--indicator-scale', 1);
+      }, 180);
+    });
+  }
 
   function updateActiveNav() {
-    if (!sections.length || !navLinks.length) return;
+    if (!navLinks.length) return;
+    if (!sections.length) {
+      moveActiveIndicator(document.querySelector('.header__link.active'));
+      return;
+    }
 
     const headerOffset = header ? header.offsetHeight : 0;
     const activationLine = headerOffset + window.innerHeight * 0.32;
@@ -144,10 +187,17 @@
       }
     });
 
+    let activeHeaderLink = null;
+
     navLinks.forEach(link => {
       const isActive = link.getAttribute('href') === '#' + activeId;
       link.classList.toggle('active', isActive);
+      if (isActive && link.classList.contains('header__link')) {
+        activeHeaderLink = link;
+      }
     });
+
+    moveActiveIndicator(activeHeaderLink);
   }
 
   window.addEventListener('scroll', updateActiveNav, { passive: true });
