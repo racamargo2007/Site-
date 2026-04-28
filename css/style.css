@@ -1192,12 +1192,27 @@ textarea.form-input {
 
 .footer__bottom p {
   font-size: 13px;
-  color: var(--white-ice);
+}
+
+.footer__copyright {
+  color: var(--gray-smoke);
 }
 
 .footer__credit {
+  color: var(--white-ice);
   font-weight: 600;
   text-align: right;
+}
+
+.footer__credit a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.footer__credit a:hover {
+  color: var(--white-pole);
+  text-decoration: underline;
+  text-underline-offset: 3px;
 }
 
 @media (min-width: 640px) {
