@@ -209,7 +209,6 @@
   // ===============================
   const revealElements = document.querySelectorAll(
     '.section__header, ' +
-    '.services-grid .card, ' +
     '.gallery-grid .tilt-card, ' +
     '.reviews-grid .card, ' +
     '.reviews-hero, ' +
