@@ -925,23 +925,21 @@ h1, h2, h3, h4, h5, h6 {
 /* ==============================
    LOCATION
    ============================== */
+#localizacao .container {
+  max-width: min(1520px, 100%);
+}
+
 .location-grid {
   display: grid;
   grid-template-columns: 1fr;
-  gap: var(--space-7);
-}
-
-@media (min-width: 768px) {
-  .location-grid {
-    grid-template-columns: minmax(220px, 0.7fr) minmax(0, 2.3fr);
-    align-items: start;
-  }
+  gap: var(--space-5);
 }
 
 .location__info {
   display: flex;
   flex-direction: column;
   gap: var(--space-5);
+  max-width: 520px;
 }
 
 .location__item {
@@ -978,15 +976,15 @@ h1, h2, h3, h4, h5, h6 {
 .location__map iframe {
   display: block;
   width: 100%;
-  height: min(70vh, 620px);
-  min-height: 460px;
+  height: clamp(560px, 78vh, 820px);
+  min-height: 560px;
   border: 0;
 }
 
 @media (max-width: 767px) {
   .location__map iframe {
-    height: 420px;
-    min-height: 420px;
+    height: 70vh;
+    min-height: 480px;
   }
 }
 
