@@ -106,6 +106,13 @@
   animation: fadeInUp 0.5s ease forwards;
 }
 
+.services-grid .card.visible:hover,
+.reviews-grid .card.visible:hover {
+  animation: none;
+  opacity: 1;
+  transform: translateY(-3px);
+}
+
 .services-grid .card.visible:nth-child(1),
 .gallery-grid .tilt-card.visible:nth-child(1),
 .reviews-grid .card.visible:nth-child(1) { animation-delay: 0ms; }
@@ -123,10 +130,16 @@
 .reviews-grid .card.visible:nth-child(4) { animation-delay: 240ms; }
 
 .services-grid .card.visible:nth-child(5),
-.gallery-grid .tilt-card.visible:nth-child(5) { animation-delay: 320ms; }
+.gallery-grid .tilt-card.visible:nth-child(5),
+.reviews-grid .card.visible:nth-child(5) { animation-delay: 320ms; }
 
 .services-grid .card.visible:nth-child(6),
-.gallery-grid .tilt-card.visible:nth-child(6) { animation-delay: 400ms; }
+.gallery-grid .tilt-card.visible:nth-child(6),
+.reviews-grid .card.visible:nth-child(6) { animation-delay: 400ms; }
+
+.reviews-grid .card.visible:nth-child(7) { animation-delay: 480ms; }
+
+.reviews-grid .card.visible:nth-child(8) { animation-delay: 560ms; }
 
 /* ---- Section header animation ---- */
 .section__header {

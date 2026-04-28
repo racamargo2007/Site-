@@ -103,6 +103,27 @@ button {
 }
 
 /* ---- Noise overlay ---- */
+#particleCanvas {
+  position: fixed;
+  inset: 0;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  opacity: 0.4;
+}
+
+main,
+.footer {
+  position: relative;
+}
+
+.section > .container,
+.footer > .container {
+  position: relative;
+  z-index: 2;
+}
+
 .noise-overlay {
   position: fixed;
   inset: 0;
@@ -177,11 +198,29 @@ h1, h2, h3, h4, h5, h6 {
   font-size: 15px;
   font-weight: 600;
   border-radius: var(--radius-input);
-  transition: all var(--transition-normal);
+  transition: transform 250ms ease, box-shadow 250ms ease, background 250ms ease, border-color 250ms ease;
   position: relative;
   overflow: hidden;
   min-height: 44px;
   white-space: nowrap;
+}
+
+.btn::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(
+    circle at var(--mx, 50%) var(--my, 50%),
+    rgba(255, 255, 255, 0.12) 0%,
+    transparent 60%
+  );
+  opacity: 0;
+  transition: opacity 250ms ease;
+  pointer-events: none;
+}
+
+.btn:hover::after {
+  opacity: 1;
 }
 
 .btn--primary {
@@ -191,7 +230,13 @@ h1, h2, h3, h4, h5, h6 {
 
 .btn--primary:hover {
   background: var(--blue-dark);
-  transform: translateY(-1px);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(13, 42, 87, 0.4);
+}
+
+.btn--primary:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 8px rgba(13, 42, 87, 0.3);
 }
 
 .btn__pole-stripe {
@@ -220,7 +265,14 @@ h1, h2, h3, h4, h5, h6 {
 
 .btn--secondary:hover {
   background: var(--black-graphite);
-  transform: translateY(-1px);
+  border-color: rgba(141, 151, 166, 0.75);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(13, 42, 87, 0.22);
+}
+
+.btn--secondary:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 8px rgba(13, 42, 87, 0.18);
 }
 
 .btn--ghost {
@@ -255,6 +307,7 @@ h1, h2, h3, h4, h5, h6 {
 .card:hover {
   border-color: rgba(42, 47, 56, 1);
   box-shadow: 0 0 30px rgba(13, 42, 87, 0.1);
+  transform: translateY(-3px);
 }
 
 .card__badge {
@@ -651,6 +704,13 @@ h1, h2, h3, h4, h5, h6 {
   border-radius: var(--radius-input);
   color: var(--blue-pole);
   margin-bottom: var(--space-4);
+  transition: transform 250ms ease, background 250ms ease, border-color 250ms ease;
+}
+
+.service-card:hover .service-card__icon {
+  background: rgba(13, 42, 87, 0.3);
+  border-color: rgba(30, 90, 168, 0.5);
+  transform: scale(1.08);
 }
 
 .service-card__title {

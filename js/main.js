@@ -6,6 +6,84 @@
   'use strict';
 
   // ===============================
+  // 0. Ambient background particles
+  // ===============================
+  const particleCanvas = document.getElementById('particleCanvas');
+  const particleCtx = particleCanvas ? particleCanvas.getContext('2d') : null;
+  let particleWidth = 0;
+  let particleHeight = 0;
+  let particles = [];
+
+  class Particle {
+    constructor() {
+      this.colors = ['30, 90, 168', '245, 247, 250', '141, 151, 166'];
+      this.reset();
+    }
+
+    reset() {
+      this.x = Math.random() * particleWidth;
+      this.y = Math.random() * particleHeight;
+      this.size = Math.random() * 1.5 + 0.5;
+      this.speedX = (Math.random() - 0.5) * 0.3;
+      this.speedY = (Math.random() - 0.5) * 0.3;
+      this.opacity = Math.random() * 0.4 + 0.1;
+      this.color = this.colors[Math.floor(Math.random() * this.colors.length)];
+    }
+
+    update() {
+      this.x += this.speedX;
+      this.y += this.speedY;
+
+      if (
+        this.x < 0 ||
+        this.x > particleWidth ||
+        this.y < 0 ||
+        this.y > particleHeight
+      ) {
+        this.reset();
+      }
+    }
+
+    draw() {
+      particleCtx.beginPath();
+      particleCtx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
+      particleCtx.fillStyle = `rgba(${this.color}, ${this.opacity})`;
+      particleCtx.fill();
+    }
+  }
+
+  function resizeParticles() {
+    if (!particleCanvas || !particleCtx) return;
+
+    const dpr = Math.min(window.devicePixelRatio || 1, 2);
+    particleWidth = window.innerWidth;
+    particleHeight = window.innerHeight;
+    particleCanvas.width = Math.floor(particleWidth * dpr);
+    particleCanvas.height = Math.floor(particleHeight * dpr);
+    particleCanvas.style.width = particleWidth + 'px';
+    particleCanvas.style.height = particleHeight + 'px';
+    particleCtx.setTransform(dpr, 0, 0, dpr, 0, 0);
+    particles = Array.from({ length: 60 }, () => new Particle());
+  }
+
+  function animateParticles() {
+    if (!particleCtx) return;
+
+    particleCtx.clearRect(0, 0, particleWidth, particleHeight);
+    particles.forEach(particle => {
+      particle.update();
+      particle.draw();
+    });
+    requestAnimationFrame(animateParticles);
+  }
+
+  if (particleCanvas && particleCtx) {
+    resizeParticles();
+    animateParticles();
+    window.addEventListener('resize', resizeParticles);
+  }
+
+  // ===============================
   // 1. Mobile Menu
   // ===============================
   const hamburger = document.getElementById('hamburger');
@@ -154,7 +232,20 @@
   });
 
   // ===============================
-  // 6. Smooth scroll for anchor links
+  // 6. Button cursor glow
+  // ===============================
+  document.querySelectorAll('.btn').forEach(btn => {
+    btn.addEventListener('mousemove', (e) => {
+      const rect = btn.getBoundingClientRect();
+      const x = ((e.clientX - rect.left) / rect.width) * 100;
+      const y = ((e.clientY - rect.top) / rect.height) * 100;
+      btn.style.setProperty('--mx', x + '%');
+      btn.style.setProperty('--my', y + '%');
+    });
+  });
+
+  // ===============================
+  // 7. Smooth scroll for anchor links
   // ===============================
   document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', (e) => {
@@ -171,7 +262,7 @@
   });
 
   // ===============================
-  // 7. Contact form (simple handler)
+  // 8. Contact form (simple handler)
   // ===============================
   const contactForm = document.getElementById('contactForm');
   if (contactForm) {
