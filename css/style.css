@@ -399,6 +399,7 @@ h1, h2, h3, h4, h5, h6 {
   align-items: center;
   justify-content: space-between;
   height: 72px;
+  position: relative;
 }
 
 .header__logo {
@@ -548,6 +549,9 @@ h1, h2, h3, h4, h5, h6 {
 @media (min-width: 768px) {
   .header__nav {
     display: block;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
   }
   .header__hamburger {
     display: none;
