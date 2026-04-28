@@ -131,8 +131,8 @@
   const headerMenu = document.querySelector('.header__menu');
   const navLinks = document.querySelectorAll('.header__link, .mobile-nav__link');
   let activeIndicator = null;
-  let activeIndicatorFrame = null;
   let lastIndicatorX = 0;
+  let lastIndicatorWidth = 0;
 
   if (headerMenu) {
     activeIndicator = document.createElement('span');
@@ -151,22 +151,21 @@
     const linkRect = activeLink.getBoundingClientRect();
     const nextX = linkRect.left - menuRect.left;
     const distance = Math.abs(nextX - lastIndicatorX);
-    const stretch = Math.min(1.45, 1 + distance / 360);
+    const isMovingRight = nextX >= lastIndicatorX;
+    const stretch = Math.min(44, Math.max(18, distance * 0.34));
+    const stretchX = isMovingRight ? lastIndicatorX : Math.max(nextX - stretch, 0);
+    const stretchWidth = Math.max(lastIndicatorWidth || linkRect.width, distance + linkRect.width + stretch);
 
-    activeIndicator.style.setProperty('--indicator-x', nextX + 'px');
-    activeIndicator.style.setProperty('--indicator-width', linkRect.width + 'px');
-    activeIndicator.style.setProperty('--indicator-scale', stretch);
-    lastIndicatorX = nextX;
+    activeIndicator.style.setProperty('--indicator-x', stretchX + 'px');
+    activeIndicator.style.setProperty('--indicator-width', stretchWidth + 'px');
 
-    if (activeIndicatorFrame) {
-      window.cancelAnimationFrame(activeIndicatorFrame);
-    }
-
-    activeIndicatorFrame = window.requestAnimationFrame(() => {
-      window.setTimeout(() => {
-        activeIndicator.style.setProperty('--indicator-scale', 1);
-      }, 180);
+    window.requestAnimationFrame(() => {
+      activeIndicator.style.setProperty('--indicator-x', nextX + 'px');
+      activeIndicator.style.setProperty('--indicator-width', linkRect.width + 'px');
     });
+
+    lastIndicatorX = nextX;
+    lastIndicatorWidth = linkRect.width;
   }
 
   function updateActiveNav() {
